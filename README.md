@@ -1,6 +1,9 @@
 ### 画面遷移図
 https://www.figma.com/board/lNk3ZP7fg0IrpHO5R3Yiqt/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB_20240814?node-id=0-1&t=hHptmX0ZCSjCkUCb-1
 
+### ER図  + 画面遷移図
+https://www.figma.com/design/tpjyaAT5fos8D7O04Id6UV/%E7%84%A1%E9%A1%8C?node-id=0-1&t=h4kc6qC9HSZG8Boc-1
+
 # runteq_portfolio01
 
 ■サービス概要  
