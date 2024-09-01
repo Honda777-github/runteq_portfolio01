@@ -116,3 +116,6 @@ textarea {
   justify-content: center;
   gap: 24px;
 }
+.mr-24 {
+  margin-right: 24px;
+}

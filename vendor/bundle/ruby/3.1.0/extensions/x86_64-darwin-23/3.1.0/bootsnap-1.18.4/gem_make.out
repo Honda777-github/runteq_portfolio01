@@ -1,0 +1,20 @@
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.4/ext/bootsnap
+/Users/hond/.rbenv/versions/3.1.4/bin/ruby -I /Users/hond/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+checking for fdatasync() in unistd.h... yes
+checking for whether -D_GNU_SOURCE is accepted as CPPFLAGS... yes
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.4/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240901-7636-7q8ves sitelibdir\=./.gem.20240901-7636-7q8ves clean
+
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.4/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240901-7636-7q8ves sitelibdir\=./.gem.20240901-7636-7q8ves
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.4/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240901-7636-7q8ves sitelibdir\=./.gem.20240901-7636-7q8ves install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20240901-7636-7q8ves/bootsnap

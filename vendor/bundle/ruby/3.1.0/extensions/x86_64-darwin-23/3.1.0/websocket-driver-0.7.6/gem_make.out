@@ -1,0 +1,16 @@
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+/Users/hond/.rbenv/versions/3.1.4/bin/ruby -I /Users/hond/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240901-7636-bigqiy sitelibdir\=./.gem.20240901-7636-bigqiy clean
+
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240901-7636-bigqiy sitelibdir\=./.gem.20240901-7636-bigqiy
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240901-7636-bigqiy sitelibdir\=./.gem.20240901-7636-bigqiy install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20240901-7636-bigqiy
