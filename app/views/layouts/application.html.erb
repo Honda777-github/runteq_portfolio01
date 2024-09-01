@@ -19,16 +19,29 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <% if user_signed_in? %>
+          <strong><%= link_to current_user.username, products_show_path %></strong>
+          <%= link_to 'プロフィール変更', edit_user_registration_path %>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to 'サインアップ', new_user_registration_path %>
+          <%= link_to 'ログイン', new_user_session_path %>
+        <% end %>
+      </nav>
+    </header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <main class="container mx-auto mt-28 px-5 flex">
 
   <div class="container-fluid">
     <div class="row">
-
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <%= yield %>
       </main>
     </div>
   </div>
-    </main>
+
   </body>
 </html>

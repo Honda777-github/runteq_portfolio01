@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+  root 'products#index'
+  get 'products/index'
   # root to: 'devise/registrations#new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -13,9 +15,9 @@ Rails.application.routes.draw do
   # get 'login', to: 'logins#new'
 
   # root 'logins#new'
-  root 'top#index'
+  # root 'top#index'
 
 
-  resource :login, only: [:new, :create]
+  # resource :login, only: [:new, :create]
 
 end
