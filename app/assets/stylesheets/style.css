@@ -119,3 +119,11 @@ textarea {
 .mr-24 {
   margin-right: 24px;
 }
+.page_title h2{
+  margin: 0 auto;
+}
+.flex_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
