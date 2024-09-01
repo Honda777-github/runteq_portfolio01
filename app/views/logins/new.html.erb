@@ -3,13 +3,13 @@
 
 <%= form_with(url: login_path) do |form| %>
   <div>
-    <%= form.label :name, '名前', style: "display: block" %>
-    <%= form.text_field :name, value: params[:name] %>
+    <%= form.label :email, 'メールアドレス', style: "display: block" %>
+    <%= form.text_field :email, value: params[:email] %>
   </div>
 
   <div>
-    <%= form.label :age, '年齢', style: "display: block" %>
-    <%= form.text_field :age, value: params[:age] %>
+    <%= form.label :encrypted_password, 'パスワード', style: "display: block" %>
+    <%= form.text_field :encrypted_password, value: params[:encrypted_password] %>
   </div>
 
   <div>

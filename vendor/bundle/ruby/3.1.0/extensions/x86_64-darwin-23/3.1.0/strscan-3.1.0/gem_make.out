@@ -1,0 +1,18 @@
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/strscan-3.1.0/ext/strscan
+/Users/hond/.rbenv/versions/3.1.4/bin/ruby -I /Users/hond/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+checking for rb_reg_onig_match() in ruby.h... no
+creating Makefile
+
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20240901-7636-9bkhyy sitelibdir\=./.gem.20240901-7636-9bkhyy clean
+
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20240901-7636-9bkhyy sitelibdir\=./.gem.20240901-7636-9bkhyy
+compiling strscan.c
+linking shared-object strscan.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20240901-7636-9bkhyy sitelibdir\=./.gem.20240901-7636-9bkhyy install
+/usr/bin/install -c -m 0755 strscan.bundle ./.gem.20240901-7636-9bkhyy

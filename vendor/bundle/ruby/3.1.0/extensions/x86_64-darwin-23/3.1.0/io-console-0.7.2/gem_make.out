@@ -1,0 +1,25 @@
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/io-console-0.7.2/ext/io/console
+/Users/hond/.rbenv/versions/3.1.4/bin/ruby -I /Users/hond/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+checking for rb_io_path()... no
+checking for rb_io_descriptor()... yes
+checking for rb_io_get_write_io()... yes
+checking for rb_io_closed_p()... no
+checking for rb_io_open_descriptor()... no
+checking for termios.h... yes
+checking for cfmakeraw() in termios.h... yes
+checking for sys/ioctl.h... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
+creating Makefile
+
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240901-7636-y4on3k sitelibdir\=./.gem.20240901-7636-y4on3k clean
+
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240901-7636-y4on3k sitelibdir\=./.gem.20240901-7636-y4on3k
+compiling console.c
+linking shared-object io/console.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/hond/Desktop/runteq/卒業制作/runteq_portfolio01/vendor/bundle/ruby/3.1.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240901-7636-y4on3k sitelibdir\=./.gem.20240901-7636-y4on3k install
+/usr/bin/install -c -m 0755 console.bundle ./.gem.20240901-7636-y4on3k/io
