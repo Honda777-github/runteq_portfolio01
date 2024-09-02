@@ -20,26 +20,42 @@
 
   <body>
     <header>
-      <nav>
+    <div class="header_content">
+    <p>カレーマップ<p>
+      <div>
+        <p class="mr-24">
         <% if user_signed_in? %>
           <strong><%= link_to current_user.username, products_show_path %></strong>
           <%= link_to 'プロフィール変更', edit_user_registration_path %>
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
         <% else %>
-          <%= link_to 'サインアップ', new_user_registration_path %>
+          <%= link_to '新規登録', new_user_registration_path %>
           <%= link_to 'ログイン', new_user_session_path %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         <% end %>
-      </nav>
+        </p>
+      </div>
+    </div>
+
     </header>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <main class="container mx-auto mt-28 px-5 flex">
 
   <div class="container-fluid">
+    <%= yield %>
     <div class="row">
-      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <%= yield %>
-      </main>
+      <div class="contener">
+        <%= image_tag "top_img1.png" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer_content">
+    <div class="footer_content_item">
+      <div><a href="#">お問い合わせ</a></div>
+      <div><a href="#">利用規約</a></div>
+      <div><a href="#">プライバシーポリシー</a></div>
     </div>
   </div>
 
