@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :shops
   devise_for :users
   root 'products#index'
   get 'products/index'
