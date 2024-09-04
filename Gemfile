@@ -25,6 +25,9 @@ gem 'devise'
 
 gem 'devise-i18n'
 
+#search function
+gem 'ransack'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

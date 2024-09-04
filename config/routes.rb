@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :shops
+  resources :shops do
+    collection do
+      get 'search'
+    end
+  end
+
+
   devise_for :users
   root 'products#index'
   get 'products/index'
