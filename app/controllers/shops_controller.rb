@@ -1,5 +1,6 @@
 class ShopsController < ApplicationController
   before_action :set_shop, only: %i[ show edit update destroy ]
+  before_action :set_q, only: %i[ index search ]
 
   # GET /shops or /shops.json
   def index
@@ -57,7 +58,16 @@ class ShopsController < ApplicationController
     end
   end
 
+  def search
+    @results = @q.result
+  end
+
   private
+
+  def set_q
+    @q = Shop.ransack(params[:q])
+  end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_shop
       @shop = Shop.find(params[:id])
