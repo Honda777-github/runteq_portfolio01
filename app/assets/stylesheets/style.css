@@ -93,6 +93,16 @@ textarea {
   background-color: #fff;
   margin:  0 auto;
 }
+.contener img {
+  margin:  0 auto;
+  display: block;
+}
+.wrapper {
+  margin:  0 auto;
+  width: 100%;
+  text-align: center;
+}
+
 .header_content {
   width: 100%;
   background-color: #F9CD1A;
@@ -126,4 +136,96 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+.button {
+  display       : inline-block;
+  border-radius : 25px;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 32px;   /* 余白       */
+  background    : #990000;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #990000;    /* 枠の指定 */
+}
+.button:hover {
+  color         : #990000;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+.search-form-7 {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.search-form-7 label {
+  width: 250px;
+}
+
+.search-form-7 input {
+  width: 100%;
+  height: 34px;
+  padding: 1px 5px 1px 8px;
+  border: 1px solid #a39e9e;
+  box-sizing: border-box;
+  color: #000;
+  outline: none;
+}
+
+.search-form-7 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  max-width: 140px;
+  height: 34px;
+  border: none;
+  background-color: #dd9822;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-form-7 button::before {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z' fill='%23fff'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.link-list {
+  display: flex;
+  gap: 10px;
+}
+
+.textlink a {
+	position: relative;
+	color: #333;
+	text-decoration: none;
+}
+.textlink a:hover {
+	color: #b99b00;
+}
+.textlink01 a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #ceb849;
+	transform: scaleX(0);
+	transition: transform 0.3s;
+}
+
+.textlink01 a:hover::after {
+	transform: scaleX(1);
 }

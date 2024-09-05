@@ -29,9 +29,12 @@
           <%= link_to 'プロフィール変更', edit_user_registration_path %>
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
         <% else %>
-          <%= link_to '新規登録', new_user_registration_path %>
-          <%= link_to 'ログイン', new_user_session_path %>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <div class="link-list">
+            <p class="textlink textlink01"><%= link_to '新規店舗登録', new_shop_path %></p>
+            <p class="textlink textlink01"><%= link_to '新規会員登録', new_user_registration_path %></p>
+            <p class="textlink textlink01"><%= link_to 'ログイン', new_user_session_path %></p>
+            <p class="textlink textlink01"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+          <div>
         <% end %>
         </p>
       </div>
@@ -43,12 +46,11 @@
     <main class="container mx-auto mt-28 px-5 flex">
 
   <div class="container-fluid">
-    <%= yield %>
-    <div class="row">
-      <div class="contener">
-        <%= image_tag "top_img1.png" %>
-      </div>
+    <div class="contener">
+      <%= image_tag "top_img1.png" %>
     </div>
+
+    <%= yield %>
   </div>
 
   <div class="footer_content">
