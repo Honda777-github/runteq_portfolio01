@@ -1,10 +1,15 @@
 class ShopsController < ApplicationController
   before_action :set_shop, only: %i[ show edit update destroy ]
-  before_action :set_q, only: %i[ index search ]
+  # before_action :set_q, only: %i[ index search ]
+  before_action :set_q, only: [:index, :search]
+  # before_action :search_shops, only: [:search, :result]
 
   # GET /shops or /shops.json
   def index
-    @shops = Shop.all
+    # @shops = Shop.all
+    @q = Shop.ransack(params[:q])
+    # @shops = @q.result(distinct: true).includes(:shop).order(created_at: :desc)
+    @shops = @q.result(distinct: true)
   end
 
   # GET /shops/1 or /shops/1.json
@@ -58,6 +63,10 @@ class ShopsController < ApplicationController
     end
   end
 
+  # def search
+  #   @results = @q.result
+  # end
+
   def search
     @results = @q.result
   end
@@ -68,13 +77,13 @@ class ShopsController < ApplicationController
     @q = Shop.ransack(params[:q])
   end
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_shop
-      @shop = Shop.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_shop
+    @shop = Shop.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def shop_params
-      params.require(:shop).permit(:name, :address, :description, :rating, :hot_rank, :img, :category, :update_at)
-    end
+  # Only allow a list of trusted parameters through.
+  def shop_params
+    params.require(:shop).permit(:name, :address, :description, :rating, :hot_rank, :img, :category, :update_at)
+  end
 end

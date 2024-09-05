@@ -11,11 +11,14 @@
   </div>
 
   <div id="shops" class="min-w-full">
-    <% @shops.each do |shop| %>
-      <%= render shop %>
-      <p>
-        <%= link_to "Show this shop", shop, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-      </p>
+    <%= search_form_for @q, url: search_shops_path do |f| %>
+      <%= f.search_field :name_cont %>
+      <%= f.submit '検索'%>
     <% end %>
+    <ul>
+      <% @shops.each do |shop| %>
+        <li><%= shop.name %></li>
+      <% end %>
+    </ul>
   </div>
 </div>
