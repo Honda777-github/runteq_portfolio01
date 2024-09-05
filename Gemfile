@@ -28,6 +28,11 @@ gem 'devise-i18n'
 #search function
 gem 'ransack'
 
+#pagenation
+gem 'kaminari'
+
+gem 'bootstrap5-kaminari-views'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

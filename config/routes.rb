@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :shops do
     collection do
-      get 'search'
+      get :search
     end
   end
 
