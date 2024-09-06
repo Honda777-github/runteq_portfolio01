@@ -6,10 +6,22 @@
 
     <%= render @shop %>
 
-    <%= link_to "Edit this shop", edit_shop_path(@shop), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to "Back to shops", shops_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "お店の編集", edit_shop_path(@shop), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "お店一覧に戻る", shops_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
-      <%= button_to "Destroy this shop", @shop, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= button_to "一覧から削除する", @shop, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
   </div>
+</div>
+<%= render 'comments/form', comment: @comment,shop: @shop %>
+
+<div class="row">
+  <div class="col-lg-8 offset-lg-2">
+    <table class="table">
+      <tbody id="table-comment">
+        <%= render @comments %>
+      </tbody>
+    </table>
+  </div>
+  <%= debug @current_user %>
 </div>
