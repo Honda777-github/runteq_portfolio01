@@ -14,6 +14,9 @@ class ShopsController < ApplicationController
 
   # GET /shops/1 or /shops/1.json
   def show
+    @shop = Shop.find(params[:id])
+    @comment = Comment.new
+    @comments = @shop.comments.includes(:user).order(created_at: :desc)
   end
 
   # GET /shops/new

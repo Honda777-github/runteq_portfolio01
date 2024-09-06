@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :shops do
+    resources :comments, only: %i[create edit destroy], shallow: true
     collection do
       get :search
     end
@@ -7,7 +8,7 @@ Rails.application.routes.draw do
 
 
   devise_for :users
-  root 'products#index'
+  root 'shops#index'
   get 'products/index'
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
