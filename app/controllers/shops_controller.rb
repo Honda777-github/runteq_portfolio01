@@ -2,7 +2,6 @@ class ShopsController < ApplicationController
   before_action :set_shop, only: %i[ show edit update destroy ]
   # before_action :set_q, only: %i[ index search ]
   before_action :set_q, only: [:index, :search]
-  # before_action :search_shops, only: [:search, :result]
 
   # GET /shops or /shops.json
   def index

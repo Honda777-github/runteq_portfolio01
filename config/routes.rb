@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :shops do
     resources :comments, only: %i[create edit destroy], shallow: true
     collection do
@@ -6,13 +7,8 @@ Rails.application.routes.draw do
     end
   end
 
-
-  devise_for :users
   root 'shops#index'
   get 'products/index'
-  devise_scope :user do
-    get '/users/sign_out' => 'devise/sessions#destroy'
-  end
   # root to: 'devise/registrations#new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
   def create
-    comment = current_user.comments.build(comment_params)
-    logger.debug "Item found: #{comment.inspect}"
+    comment = current_user.comment.build(comment_params)
     if comment.save
       redirect_to shop_path(comment.shop), success: t('defaults.flash_message.created', item: Comment.model_name.human)
     else
@@ -9,10 +8,10 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destroy
-    @comment = current_user.comments.find(params[:id])
-    @comment.destroy!
-  end
+  # def destroy
+  #   @comment = current_user.comments.find(params[:id])
+  #   @comment.destroy!
+  # end
 
   private
 
