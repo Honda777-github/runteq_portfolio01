@@ -7,27 +7,46 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= yield :head %>
+
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application.tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <div class="container-fluid">
-      <div class="contener">
-        <% if logged_in? %>
-          <%= render 'shared/header' %>
-        <% else %>
-          <%= render 'shared/before_login_header' %>
-        <% end %>
-        <%= render 'shared/flash_message' %>
-          <%= yield %>
-        <%= render 'shared/footer' %>
+    <header>
+    <div class="header_content">
+    <p><%= link_to 'カレーマップ', shops_path %><p>
+      <div>
+
       </div>
     </div>
+
+    </header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <main class="container mx-auto mt-28 px-5 flex">
+
+  <div class="container-fluid">
+    <div class="contener">
+      <%= image_tag "top_img1.png" %>
+    </div>
+
+    <%= yield %>
+  </div>
+
+  <div class="footer_content">
+    <div class="footer_content_item">
+      <div><a href="#">お問い合わせ</a></div>
+      <div><a href="#">利用規約</a></div>
+      <div><a href="#">プライバシーポリシー</a></div>
+    </div>
+  </div>
 
   </body>
 </html>
