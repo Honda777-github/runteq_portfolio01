@@ -20,6 +20,10 @@
     <table class="table">
       <tbody id="table-comment">
         <%= render @comments %>
+        <!-- コメントの一覧表示 -->
+        <% @shop.comments.each do |comment| %>
+          <p><%= comment.content %> - <%= comment.user.name %></p>
+        <% end %>
       </tbody>
     </table>
   </div>
