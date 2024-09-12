@@ -18,17 +18,22 @@
   </head>
 
   <body>
+
+  <div>
+    <p id="notice"><%= flash[:notice] %></p>
+    <p id="alert"><%= flash[:alert] %></p>
+  </div>
     
-    <div class="container-fluid">
-      <div class="contener">
-        <% if logged_in? %>
-          <%= render 'shared/header' %>
-        <% else %>
+  <div class="container-fluid">
+    <div class="contener">
+      <% if logged_in? %>
+        <%= render 'shared/header' %>
+      <% else %>
         <%= render 'shared/before_login_header' %>
-        <% end %>
-        <%= render 'shared/flash_message' %>
-        <%= yield %>
-        <%= render 'shared/footer' %>
+      <% end %>
+      <%= render 'shared/flash_message' %>
+      <%= yield %>
+      <%= render 'shared/footer' %>
     </div>
   </div>
 
