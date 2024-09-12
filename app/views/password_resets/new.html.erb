@@ -1,0 +1,9 @@
+<% content_for(:title, t('.title')) %>
+<div class='text-center'>
+  <h1>パスワードリセット申請</h1>
+  <%= form_with url: password_resets_path do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    <%= f.submit '送信' %>
+  <% end %>
+</div>

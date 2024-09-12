@@ -13,10 +13,6 @@
         <th scope="row"><%= t(User.human_attribute_name(:full_name)) %></th>
           <td><%= current_user.decorate.full_name %></td>
         </tr>
-        <tr>
-        <th scope="row"><%= t(User.human_attribute_name(:avatar)) %></th>
-          <td><%= image_tag current_user.avatar_url, class: 'rounded-circle', size: '50x50' %></td>
-        </tr>
       </table>
     </div>
   </div>
