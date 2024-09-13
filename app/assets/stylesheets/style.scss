@@ -239,3 +239,26 @@ textarea {
   gap :16px ;
   align-items: center;
 }
+
+.shop_link {
+  color: #ceb849;
+}
+.shop_link:hover {
+  color: #BF0000;
+  text-decoration: underline;
+}
+
+.a_link {
+  color: #ceb849;
+}
+.a_link:hover {
+  color: #BF0000;
+  text-decoration: underline;
+}
+
+.img_box {
+  margin: 24px 0;
+}
+.comment_box {
+  margin-top: 24px;
+}
