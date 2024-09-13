@@ -21,6 +21,6 @@ class CommentsController < ApplicationController
 
   def comment_params
     # params.require(:comment).permit(:content).merge(user_id: params[:shop_id])
-    params.require(:comment).permit(:content).merge(user_id: current_user.id)  # ユーザーIDも追加
+    params.require(:comment).permit(:content, :hot_rank).merge(user_id: current_user.id)  # ユーザーIDも追加
   end
 end

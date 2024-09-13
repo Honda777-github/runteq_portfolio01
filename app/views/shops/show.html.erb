@@ -14,15 +14,14 @@
   </div>
 </div>
 <%= render 'comments/form', comment: @comment,shop: @shop %>
-
-<div class="row">
+<div class="comment_box">
+<p>コメント一覧</p>
   <div class="col-lg-8 offset-lg-2">
     <table class="table">
       <tbody id="table-comment">
-        <%= render @comments %>
         <!-- コメントの一覧表示 -->
         <% @shop.comments.each do |comment| %>
-          <p><%= comment.content %> - <%= comment.user.name %></p>
+          <p>辛さ：<%= comment.hot_rank %> - コメント：<%= comment.content %> - ユーザー：<%= comment.user.name %></p>
         <% end %>
       </tbody>
     </table>

@@ -6,6 +6,11 @@
       <%= form.text_area :content, required: true %>
     </div>
     <div>
+      <%= form.label :hot_rank, "辛さ評価" %>
+      <%= form.number_field :hot_rank, min: 1, max: 5, required: true %>
+    </div>
+    <div>※辛さは1〜5の間で入力ができます</div>
+    <div>
       <%= form.submit "投稿する" %>
     </div>
   <% end %>
