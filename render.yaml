@@ -1,0 +1,20 @@
+databases:
+  - name: curry_db
+    databaseName: curry_db
+    user: mydb_a3wf_user
+    region: singapore
+
+services:
+  - type: web
+    name: curry_db
+    env: ruby
+    region: singapore
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: <%= ENV['DATABASE_URL'] %>
+        fromDatabase:
+          name: render_app
+          property: connectionString
+      - key: <%= ENV['RAILS_MASTER_KEY'] %>
+        sync: false
